@@ -1,0 +1,10 @@
+/* CSS SECTION */
+.musicvideo img {
+    border-radius: 5px 5px;
+}
+.musicvideo .musicvideo_small {
+    flex-wrap: wrap;
+}
+.musicvideo .musicvideo_small div {
+    margin: 1%;
+}

@@ -1,0 +1,84 @@
+/* CSS SECTION */
+div.hot {
+    display: flex;
+    flex-wrap: wrap;
+}
+section h3 i {
+    border: solid red;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+div.hot div {
+    border: 1px solid white;
+    border-radius: 15px 5px;
+    text-align: center;
+    margin: 1%;
+}
+div.hot img {
+    border-radius: 5px 5px;
+    width: 100%;
+}
+div.hot a:hover img {
+    transform: scale(1.05);
+}
+section a {
+    color: black;
+}
+h3 {
+    text-align: left;
+}
+div.musicvideo {
+    display: flex;
+    flex-wrap: wrap;
+}
+.musicvideo_small_child {
+    position: relative;
+}
+div.musicvideo_big {
+    position: relative;
+}
+div.musicvideo_small {
+    display: flex;
+}
+div.musicvideo a {
+    display: block;
+    width: 100%;
+}
+div.musicvideo img {
+    width: 100%;
+}
+div.musicvideo img.play_button {
+    width: 10%;
+    position: absolute;
+    opacity: 0;
+    left: 45%;
+    top: 45%;
+}
+div.musicvideo img:hover ~ img.play_button{
+    transform: scale(1.025);
+    opacity: 0.6;
+}
+div.musicvideo a:hover > img:first-child {
+    transform: scale(1.025);
+}
+div.musicvideo a:hover > img.play_button {
+    transform: scale(1.025);
+    opacity: 0.6;
+}
+.chartcontent {
+    display: flex;
+}
+.chartcontent > div {
+    position: relative;
+}
+.chartcontent > div img:first-child {
+    width: 70%;
+}
+.chartcontent > div img:last-child {
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    bottom: 0%;
+}

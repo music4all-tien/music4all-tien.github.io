@@ -1,0 +1,25 @@
+/* CSS SECTION */
+section h1 {
+    width: 100%;
+}
+section .albums {
+    display: flex;
+    flex-wrap: wrap;
+}
+section .album {
+    margin: 1%;
+}
+section .album img {
+    width: 100%;
+    border-radius: 5px 5px;
+}
+section .album a:hover > img {
+    transform: scale(1.05);
+}
+section .album img:hover {
+    transform: scale(1.05);
+}
+section .album p {
+    padding-top: 2%;
+    text-align: center;
+}

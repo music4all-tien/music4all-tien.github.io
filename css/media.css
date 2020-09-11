@@ -1,0 +1,109 @@
+/* CSS SECTION*/
+div.mediaarea {
+    display: flex;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 {
+    width: 100%;
+}
+h2 {
+    width: 100%;
+    font-size: 16px;
+}
+h2 a {
+    color: red;
+}
+div.song_pic img {
+    width: 100%;
+    border-radius: 5px 5px;
+    margin-bottom: 5%;
+}
+div.song_pic p {
+    display: inline-block;
+}
+div.song_pic p:nth-child(3) {
+    color: red !important;
+    padding-left: 2px;
+}
+div.song_pic a {
+    display: inline-block;
+    color: red;
+    font-weight: normal;
+}
+div.audiolyric > div {
+    margin-left: 5%;
+}
+div.audio audio {
+    width: 100%;
+    margin-top: 1%;
+}
+div.ads img{
+    width: 100%;
+}
+.comment textarea {
+    width: 95%;
+}
+.commentPost {
+    width: 10%;
+}
+section h6 {
+    font-size: 16px;
+}
+.commentPost {
+    width: 100%;
+    position: relative;
+    margin-bottom: 8%;
+}
+.commentPost input[type="submit"] {
+    position: absolute;
+    right: 5%;
+}
+.media a:hover {
+    color: rgb(31, 250, 24);
+}
+.musictool {
+    display: flex;
+    margin: 2% 10% !important;
+}
+.musictool p {
+    display: inline-block;
+}
+.musictool a {
+    display: inline-block;
+}
+.media h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5%;
+}
+.lyric a:hover {
+    color: grey;
+}
+.lyric.on_lyric .lyric_general a {
+    display: none !important;
+}
+.lyric.on_lyric .lyric_external {
+    display: block !important;
+}
+.lyric.off_lyric .lyric_general a {
+    display: block !important;
+}
+.lyric.off_lyric .lyric_external {
+    display: none !important;
+}
+.person {
+    display: flex;
+    margin-top: 1%;
+}
+.person .person_pic {
+    width: 10%;
+}
+.person img {
+    border-radius: 100% 100%;
+}
+.person p {
+    margin-left: 2%;
+}

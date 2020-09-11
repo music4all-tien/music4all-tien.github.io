@@ -1,0 +1,37 @@
+/* CSS SECTION */
+.chart_song {
+    display: flex;
+    flex-wrap: wrap;
+}
+.chart_song h3 {
+    width: 100%;
+}
+.chart_song h3 a {
+    color: red !important;
+}
+.chart_song h3 a:hover {
+    color: red;
+}
+.songfa {
+    margin: 1%;
+}
+.song {
+    position: relative;
+}
+.song img:first-child {
+    width: 100%;
+    border-radius: 5px 5px;
+}
+.song img:last-child {
+    width: 15%;
+    position: absolute;
+    left: 45%;
+    top: 85%;
+}
+.song img:hover {
+    transform: scale(1.05);
+}
+.songfa p {
+    text-align: center;
+    padding-top: 5%;
+}

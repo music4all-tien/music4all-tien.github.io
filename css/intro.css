@@ -1,0 +1,31 @@
+section {
+    display: flex !important;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    text-align: center;
+}
+section .propic img {
+    width: 100%;
+}
+section .info {
+    margin: auto;
+}
+section .application {
+    margin: 0 5%;
+}
+section .application p {
+    font-weight: 600;
+    color: blue;
+}
+section .application img {
+    width: 100%;
+    margin: 2% auto;
+}
+section .map p{
+    font-weight: 700;
+    text-align: left;
+}
+section .map iframe{
+    margin:auto;
+    width: 90%;
+}

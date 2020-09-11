@@ -1,0 +1,31 @@
+/* CSS SECTION */
+section {
+    display: flex !important;
+    flex-wrap: wrap;
+   margin: 3% 0;
+}
+section .navigation {
+    margin: 0;
+    padding-left: 0;
+    margin-top: 2%;
+    border-right: 1px solid grey;
+}
+section .navigation li{
+    list-style-type: none;
+    margin-bottom: 2%;
+}
+section .navigation  a {
+    color: black;
+    padding: 1%;
+    border-radius: 15px 15px;
+}
+section .navigation  a:hover {
+    color: white;
+    background-color: lightgrey;
+}
+section .content {
+    margin-top: 1%;
+}
+header {
+    font-size: 14px;
+}

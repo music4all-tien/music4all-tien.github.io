@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="\n">
+        <meta name="author" content="Nguyễn Tiến code:1951050085">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dân Biển Mà - Huỳnh James, Pjnboys</title>
+        <link href="../../images/favicon.png" rel="shortcut icon">
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="../../css/media.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready( function() {
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 100) {
+                        $(".go_to_top").fadeIn();
+                    }
+                    else {
+                        $(".go_to_top").fadeOut();
+                    }
+                });
+                $(".go_to_top").click( function() {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 800);
+                });
+            })
+            $(document).ready( function() {
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 150) {
+                        $("header").removeClass("optionhead");
+                        $("header").addClass("headertop");
+                    } else {
+                        $("header").removeClass("headertop");
+                        $("header").addClass("optionhead");
+                    }
+                })
+            });
+            function showPassword() {
+                if ($(".accounttyping input[name='pass']").attr("type") == "password") {
+                    $(".accounttyping input[name='pass']").attr("type", "text");
+                } else {
+                    $(".accounttyping input[name='pass']").attr("type", "password");
+                }
+            };
+            function siginin_no() {
+                alert("Chức năng này hiện đang được thử nghiệm. Bạn vẫn có thể sử dụng dịch vụ của chúng tôi kể cả khi không đăng nhập tài khoản.");
+            };
+            function siginup_no() {
+                alert("Chức năng này hiện đang được thử nghiệm. Bạn vẫn có thể sử dụng dịch vụ của chúng tôi kể cả khi không đăng ký tài khoản.");
+            };
+            function lyric_on() {
+                $(".lyric").removeClass("off_lyric");
+                $(".lyric").addClass("on_lyric");
+            }
+            function lyric_off() {
+                $(".lyric").removeClass("on_lyric");
+                $(".lyric").addClass("off_lyric");
+            }
+        </script>
+    </head>
+    <body>
+        <header class="optionhead">
+            <div id="first_head">
+                <div class="logo wid20">
+                    <a href="../../index.html"><img src="../../images/logo.ico" alt="logo"/></a>
+                </div>
+                <div class="searchBox wid50">
+                    <input class="wid80" type="search" placeholder="  Bài hát, Ca sĩ, Album,..."/>
+                    <button class="fa fa-search"></button>
+                </div>
+                <div class="account wid10">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-info btn-lg option" data-toggle="modal" data-target="#myModal_signin">Đăng Nhập</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal_signin" role="dialog">
+                        <div class="modal-dialog">
+                        
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Đăng Nhập</h4>
+                                </div>
+                                <div class="modal-body accounttyping">
+                                <form style="width: 100%;">
+                                    <p class="wid25">Tên tài khoản: </p>
+                                    <input class="wid50" type="text" autocomplete="on" placeholder="Tên đăng nhập..." name="Tên Tài Khoản/" required/></br>
+                                    <p class="wid25">Mật Khẩu: </p>
+                                    <input class="wid50" type="password" name="pass" placeholder="Mật khẩu" required/>
+                                    <input type="checkbox" onclick="showPassword()"/> Hiện mật khẩu </br>
+                                    <div class="submit_button"><input type="submit"value="Đăng Nhập"/></div>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account wid10">
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg option" data-toggle="modal" data-target="#myModal_signup">Đăng Ký</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal_signup" role="dialog">
+                            <div class="modal-dialog">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Đăng Ký</h4>
+                                        </div>
+                                        <div class="modal-body accounttyping">
+                                        <form style="width: 100%;">
+                                            <p class="wid25">Tên tài khoản: </p>
+                                            <input class="wid50" type="text" autocomplete="on" placeholder="Tên đăng nhập..." name="Tên Tài Khoản/" required/></br>
+                                            <p class="wid25">Email: </p>
+                                            <input class="wid50" type="email" autocomplete="on" placeholder="example:user@music4all.com.vn" required/>
+                                            <p class="wid25">Mật Khẩu: </p>
+                                            <input class="wid50" type="password" minlength="8" maxlength="15" name="pass" placeholder="Mật khẩu" required/>
+                                            <input type="checkbox" onclick="showPassword()"/> Hiện mật khẩu </br>
+                                            <p class="wid25">Nhập lại mật khẩu: </p>
+                                            <input class="wid50" type="password" minlength="8" maxlength="15" name="pass" placeholder="Mật khẩu" required/>
+                                            <p class="wid25">Ngày sinh: </p>
+                                            <input class="wid25" type="date" required/></br>
+                                            <p class="wid25">Giới tính: </p>
+                                            <div class="gender"> 
+                                                <input type="radio" name="gen" value="male" checked/> Nam
+                                                <input type="radio" name="gen" value="female"/> Nữ
+                                                <input type="radio" name="gen" value="unknown"/> Không xác định
+                                            </div></br>
+                                            <p class="wid25">Số điện thoại</p>
+                                            <input type="tel" autocomplete="on" name="Telphone" placeholder="(tùy chọn)"/></br>
+                                            <p class="wid25">Quốc gia: </p>
+                                            <select class="country">
+                                                <optgroup label="Châu Á">
+                                                    <option selected>Việt Nam</option>
+                                                    <option>Nhật Bản</option>
+                                                    <option>Hàn Quốc</option>
+                                                    <option>Singapore</option>
+                                                    <option>Đài Loan</option>
+                                                    <option>Trung Quốc</option>
+                                                    <option>Hong Kong</option>
+                                                    <option>Indonesia</option>
+                                                    <option>Malaysia</option>
+                                                    <option>Philipines</option>
+                                                    <option>Triều Tiên</option>
+                                                    <option>Nga</option>
+                                                    <option>Uzbekistan</option>
+                                                    <option>Thổ Nhĩ Kỳ</option>
+                                                    <option>Khác</option>
+                                                </optgroup>
+                                                <optgroup label="Châu Âu">
+                                                    <option>Anh Quốc</option>
+                                                    <option>Pháp</option>
+                                                    <option>Tây Ban Nha</option>
+                                                    <option>Phần Lan</option>
+                                                    <option>Ukraine</option>
+                                                    <option>Hungary</option>
+                                                    <option>Hà Lan</option>
+                                                    <option>Thụy Sĩ</option>
+                                                    <option>Bỉ</option>
+                                                    <option>Đan Mạch</option>
+                                                    <option>Khác</option>
+                                                </optgroup>
+                                                <optgroup label="Châu Mỹ">
+                                                    <option>Hoa Kỳ</option>
+                                                    <option>Cannada</option>
+                                                    <option>Cuba</option>
+                                                    <option>Chile</option>
+                                                    <option>Peru</option>
+                                                    <option>Brazil</option>
+                                                    <option>Martinique</option>
+                                                    <option>Costa Rica</option>
+                                                    <option>Khác</option>
+                                                </optgroup>
+                                                <optgroup label="Châu Phi">
+                                                    <option>Angola</option>
+                                                    <option>Cộng hòa Congo</option>
+                                                    <option>Nam Phi</option>
+                                                    <option>Ai Cập</option>
+                                                    <option>Đông Phi</option>
+                                                    <option>Ethiopia</option>
+                                                    <option>Zimbabwe</option>
+                                                    <option>Uganda</option>
+                                                    <option>Khác</option>
+                                                </optgroup>
+                                                <optgroup label="Châu Đại Dương">
+                                                    <option>New Zealand</option>
+                                                    <option>Cộng hòa Vanuatu</option>
+                                                    <option>Cộng hòa Kiribati</option>
+                                                    <option>Cộng hòa Fiji</option>
+                                                    <option>Quần đảo Solomon</option>
+                                                    <option>Tuvalu</option>
+                                                    <option>Tokelau</option>
+                                                    <option>Khác</option>
+                                                </optgroup>
+                                            </select>
+                                            <div class="submit_button"><input type="submit"value="Đăng Ký"/></div>
+                                        </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="navigation_head">
+                    <li><a href="../../index.html">Trang Chủ</a></li>
+                    <li><a href="../../../index.html#hotmusic">Nhạc HOT</a></li>
+                    <li>
+                        <a href="../../bangxephang.html">Bảng Xếp Hạng</a>
+                        <ul class="submenu">
+                            <li class="wid50"><a href="../../bangxephang.html">Việt Nam</a></li>
+                            <li class="wid50"><a href="../../bangxephang.html#eu">Châu Âu</a></li>
+                            <li class="wid50"><a href="../../bangxephang.html#asia">Châu Á</a></li>
+                            <li class="wid50"><a href="../../bangxephang.html#world">Thế Giới</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../../album.html">Album</a>
+                        <ul class="submenu">
+                            <li class="wid50"><a href="../../album/nhacxuan.html">Nhạc Xuân 2021</a></li>
+                            <li class="wid50"><a href="../../album/nhactre.html">Nhạc Trẻ Chọn Lọc</a></li>
+                            <li class="wid50"><a href="../../album/nhacbolero.html">Nhạc Bolero Chọn Lọc</a></li>
+                            <li class="wid50"><a href="../../album/nhaccachmang.html">Nhạc Cách Mạng Tuyển Tập</a></li>
+                            <li class="wid50"><a href="../../album/nhacnuocngoai.html">Nhạc Nước Ngoài Chọn Lọc</a></li>
+                            <li class="wid50"><a href="../../album/nhacgiangsinh.html">Nhạc Giáng Sinh Hay Nhất</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../mv.html">MV</a></li>
+                    <li>
+                        <a href="../../nghesi.html">Nghệ Sĩ</a>
+                        <ul class="submenu">
+                            <li class="wid50"><a href="../../nghesi.html">Tất Cả</a></li>
+                            <li class="wid50"><a href="../../nghesi.html#vi">Việt Nam</a></li>
+                            <li class="wid50"><a href="../../nghesi.html#eu">Châu Âu</a></li>
+                            <li class="wid50"><a href="../../nghesi.html#asia">Châu Á</a></li>
+                        </ul>
+                    </li>
+                    <li class="VIPfeature">
+                         <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn VIPfeature" data-toggle="modal" data-target="#myModal_VIP">VIP</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal_VIP" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Tính năng người dùng VIP</h4>
+                                        </div>
+                                        <p style="text-align: center;">Bạn phải đăng nhập/đăng ký tài khoản trước.</p>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2><a href="../../index.html">Trang Chủ</a> > Bài Hát</h2>
+            <h1>Dân Biển Mà - Huỳnh James, Pjnboys</h1>
+            <div class="media wid70">
+                <div class="mediaarea">
+                    <div class="song_pic wid30">
+                        <img src="../../images/danbienma_huynhjames_pjnboys.png" alt="song_picture"/>
+                        <p>Album:  </p>
+                        <p> Dân Biển Mà (Single)</p></br>
+                        <p>Ca sĩ:  </p>
+                        <a href=""> Huỳnh James, Pjnboys</a>
+                    </div>
+                    <div class="audiolyric wid60">
+                        <!-- https://drive.google.com/file/d/1UatuXsY3iP8zNSLKuz5Toy1hAZDBUTwm/view?usp=sharing -->
+                        <div class="audio">
+                            <audio controls="controls" autoplay="autoplay">
+                                <source src="https://drive.google.com/uc?export=host&id=1UatuXsY3iP8zNSLKuz5Toy1hAZDBUTwm"/>
+                            </audio>
+                        </div>
+                        <div class="musictool">
+                            <div class="download wid30">
+                                <a href="https://drive.google.com/u/0/uc?id=1UatuXsY3iP8zNSLKuz5Toy1hAZDBUTwm&export=download">
+                                    <img style="width: 15%;" src="../../images/download_icon.png" alt="mv_icon"/>
+                                    Tải Xuống
+                                </a>
+                            </div>
+                            <div class="mv wid30">
+                                <a href="../video/danbienma_mv.html" >
+                                    <img style="width: 15%;" src="../../images/mv_icon.png" alt="mv_icon"/>
+                                    Xem MV
+                                </a>
+                                <!--<p>
+                                    <img style="width: 15%;" src="../../images/mv_icon.png" alt="mv_icon"/>
+                                    Xem MV
+                                </p>-->
+                            </div>          
+                            <div class="share wid30">
+                                <a target="_blank" href="https://www.facebook.com/dialog/share?app_id=26346326346&caption=Music4All&href=">
+                                    <img style="width: 15%;" src="../../images/share_icon.png" alt="share_icon"/>
+                                    Chia sẻ
+                                </a>
+                            </div>                  
+                        </div>
+                        <div class="lyric off_lyric">
+                            <h5 style="width: 100%;">Lời Bài Hát</h5>
+                            <div class="lyric_general">
+                                <p>
+                                    Dân biển tụi anh thật thà và chất phác</br>
+                                    Chọn mặt gửi vàng làm sao mà mất mát</br>
+                                    Anh em ơi lên thuyền mình lại cùng ra khơi</br>
+                                    Mẹ thiên nhiên ưu ái như là Caribbean</br>
+                                    Sóng to gió lớn thấm thía như cuộc đời</br>
+                                    Như là những bài hát tụi anh đã thuộc lời</br>
+                                    Đừng có chê tụi anh quanh năm mùi mắm cá</br>
+                                    Sau 4 giờ chiều chưa biết ai khấm khá
+                                </p>
+                                <a href="javacript:;" onclick="lyric_on()">Xem toàn bộ ></a>
+                            </div>
+                            <div class="lyric_external">
+                                <p>
+                                    
+                                    Dân chơi xứ biển gọi anh là sáu bảnh</br>
+                                    Minh tinh màn bạc giống như là trong phim ảnh</br>
+                                    Con người nơi đây hào sản và phóng khoáng</br>
+                                    Ăn to nói lớn sống không thích tính toán</br>
+                                    Tụi anh sống thảo lảo chứ không thích kiểu thảo mai</br>
+                                    Thương nhau mà hiểu không có thích dạy bảo ai</br>
+                                    Biển xanh cát trắng, dừng chân là khó phai</br>
+                                    Khơi bừng chất biển - hai tụi anh đây chứ ai!</br>
+                                    Ngọn hải đăng soi sáng trong đêm</br>
+                                    Lặng thầm rọi soi dẫn lối ta đi</br>
+                                    Tàu thuyền ghe ta đi bao xa</br>
+                                    Thì ngọn hải đăng vẫn luôn dõi theo</br>
+                                    Sóng gió gian khó sao ngăn được ta</br>
+                                    Vững chắc tay lái, anh em vượt xa</br>
+                                    Xua tan đi bóng tối ta căng cờ lên mang theo khát khao</br>
+                                    Oh oh oh</br>
+                                    Dzô nà dzô, ta là DÂN BIỂN MÀ!</br>
+                                    Dzô nà dzô, ta là DÂN BIỂN MÀ!</br>
+                                    Dzô cho hết số, ghe dzô tiền dzô</br>
+                                    Ăn nên làm ra nha mấy cha</br>
+                                    Dzô nà dzô</br>
+                                    Ta là DÂN BIỂN MÀ!</br>
+                                    Dzô nà dzô</br>
+                                    Ta là DÂN BIỂN MÀ!</br>
+                                    Chơi lấy số, dzô mánh lố mai ta giàu to, không có lo</br>
+                                    Vay tiền góp anh đóng chiếc ghe</br>
+                                    Ông già nói nhưng vẫn không nghe</br>
+                                    Bao hiểm nguy cay đắng không màng</br>
+                                    Anh chỉ mong cho cá đầy ghe</br>
+                                    Câu mực đêm kiếm kế sinh nhai</br>
+                                    Lo làm ăn xây đắp tương lai</br>
+                                    Đời chê bai nhưng vẫn lạc quan</br>
+                                    Em ơi đừng lo, anh sẽ không thế đồ</br>
+                                    Nào anh em ơi ta kéo cá nhanh lên</br>
+                                    Ghẹ cua tôm dzô, là nhờ phước ơn trên</br>
+                                    Điệu lambada anh em ta cùng bào</br>
+                                    Vượt qua bão giông, đương đầu với ngọn gió</br>
+                                    Làm một lon BIVINA tâm hồn ta sảng khoái!</br>
+                                    Cùng nhau vui ca tinh thần luôn thoải mái</br>
+                                    Bởi vì ta là DÂN BIỂN MÀ</br>
+                                    Ngọn hải đăng soi sáng trong đêm</br>
+                                    Lặng thầm rọi soi dẫn lối ta đi</br>
+                                    Tàu thuyền, ghe ta đi bao xa, thì ngọn hải vẫn dõi theo</br>
+                                    Sóng gió gian khó sao ngăn được ta</br>
+                                    Vững chắc tay lái, anh em vượt xa</br>
+                                    Xua tan đi bóng tối ta căng cờ lên mang theo khát khao</br>
+                                    Anh em ơi ta cùng lên ghe nào</br>
+                                    Nhanh nhanh chân mang vô đôi dép lào</br>
+                                    Xuống dưới đó có cái xóm cồn chà</br>
+                                    Nhanh nhanh chân bốc vác ở bến phà</br>
+                                    Ta tự do tự tại, ta không cần tới thước đo</br>
+                                    Ngoài kia vật chất đồng tiền phải khá lo</br>
+                                    Nhưng mà về nơi đây mọi chuyện để má lo</br>
+                                    Má không có gì hết chỉ có nồi cá kho.</br>
+                                    Ăn nên làm ra nha mấy cha</br>
+                                    Bởi vì ta là DÂN BIỂN MÀ!
+                                </p>
+                                <a href="javacript:;" onclick="lyric_off()">< Rút gọn </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <h6>Nhận xét</h6>
+                    <textarea placeholder=" Cảm nhận của bạn như thế nào khi nghe bài hát này..."></textarea>
+                    <div class="commentPost">
+                        <input type="submit" value="Đăng bài"/>
+                    </div>
+                </div>   
+                <div class="comment_sample">
+                    <div class="person">
+                        <div class="person_pic">
+                            <img src="../../images/person/person_nopic.png" style="width: 100%;" alt="person_pic"/>
+                        </div>
+                        <p style="width: 80%;"><b>Private Users</b><br>Bài hát hay lắm anh ạ. Chúc Anh sẽ thành công hơn nữa.</p>
+                    </div>
+                    <div class="person">
+                        <div class="person_pic">
+                            <img src="../../images/person/person_nopic.png" style="width: 100%;" alt="person_pic"/>
+                        </div>
+                        <p style="width: 80%;"><b>Private Users</b><br>Bài hát hay lắm anh ạ. Chúc Anh sẽ thành công hơn nữa.</p>
+                    </div>
+                    <div class="person">
+                        <div class="person_pic">
+                            <img src="../../images/person/person_nopic.png" style="width: 100%;" alt="person_pic"/>
+                        </div>
+                        <p style="width: 80%;"><b>Private Users</b><br>Chẳng có từ nào ngoài "tuyệt vời"</p>
+                    </div>
+                    <div class="person">
+                        <div class="person_pic">
+                            <img src="../../images/person/person_nopic.png" style="width: 100%;" alt="person_pic"/>
+                        </div>
+                        <p style="width: 80%;"><b>Private Users</b><br>Music4All rất tốt trong việc quản lí những bài hát. Chất lượng rất đáng để sử dụng lâu dài.</p>
+                    </div>
+                    <div class="person">
+                        <div class="person_pic">
+                            <img src="../../images/person/person_nopic.png" style="width: 100%;" alt="person_pic"/>
+                        </div>
+                        <p style="width: 80%;"><b>Private Users</b><br>Hay cực luôn í. Cho 10 cái 10 điểm luôn nào. &#128525</p>
+                    </div>
+                    <div class="person">
+                        <div class="person_pic">
+                            <img src="../../images/person/person_nopic.png" style="width: 100%;" alt="person_pic"/>
+                        </div>
+                        <p style="width: 80%;"><b>Private Users</b><br>đem bài hát vào bài tập lớn nào. Kakak</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="ads wid20">
+                <div class="ads_pic">
+                    <a href="https://www.youtube.com/channel/UCKTVLFkzFGM824J2pgvaTQw" target="_blank">
+                        <img src="../../images/ads/ads2.png" alt="ads"/>
+                    </a>
+                </div>
+                <div class="ads_pic">
+                    <a href="https://www.youtube.com/channel/UCKTVLFkzFGM824J2pgvaTQw" target="_blank">
+                        <img src="../../images/ads/ads1.png" alt="ads"/>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="line">
+            <br>
+        </div>
+        <div class="go_to_top"><a href="javascript:;"><i></i></a></div>
+        <footer>
+            <div class="profile wid20">
+                <img src="../../images/profile.png" alt="tiennguyen">
+                <p>Designed by<br><a href="mailto:1951050085tien@ou.edu.vn" title="Gửi mail cho tôi">Tiến Nguyễn</a></p>
+            </div>
+            <div class="aboutUS wid20">
+                <h3>Về Chúng Tôi</h3>
+                <ul>
+                    <li><a href="../gioithieu.html">Giới Thiệu</a></li>
+                    <li><a href="../dieukhoan.html">Điều Khoản Sử Dụng</a></li>
+                    <li><a href="../tuyendung.html">Tuyển Dụng</a></li>
+                    <li><a href="../quangcao.html">Liên Hệ Quảng Cáo</a></li>
+                </ul>
+            </div>
+            <div class="app wid20">
+                <h3>Tải Xuống</h3>
+                <a href="https://play.google.com/store/apps/" target="_blank" title="Dành cho điện thoại Android">
+                    <img src="../../images/global-playstore.png" alt="Android"/>
+                </a>
+                <a href="https://apps.apple.com/vn/app/" target="_blank" title="Dành cho điện thoại iPhone">
+                    <img src="../../images/itunes-app-store-logo.png" alt="iOS"/>
+                </a>
+                <a href="https://www.microsoft.com/vi-vn/store/apps/windows-phone" target="_blank" title="Dành cho điện thoại Lumia">
+                    <img src="../../images/wp.png" alt="WindowPhone"/>
+                </a>
+            </div>
+            <div class="location">
+                <h3>Liên hệ trực tiếp</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.924938073725!2d106.67488251450219!3d10.81705629229398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2zxJDhuqFpIGjhu41jIE3hu58gVFAuSENN!5e0!3m2!1svi!2s!4v1598520153108!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </footer>
+    </body>
+</html>
